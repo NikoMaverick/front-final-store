@@ -1,12 +1,32 @@
-import { useState } from 'react'
-import './App.css'
+import { useState, useEffect } from 'react'
 
-function App() {
+
+const App = () => {
+  const [data, setData] = useState([])
+  const urlApiStore = 'http://localhost:8080/apistore'
+
+  const fetchData = async () => {
+    try {
+      const response = await fetch(urlApiStore)
+      const resData = await response.json()
+      setData(resData)
+      
+    } catch (error) {
+      console.log(error)
+      
+    }
+  }
+  
+  useEffect(() => {
+    fetchData()
+  }, [])
+  
   return (
     <>
-    <h1>Iniciamos el project</h1>
+    {console.log(data)}
     </>
   )
 }
 
-export default App
+
+export default App;
