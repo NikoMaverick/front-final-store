@@ -20,17 +20,32 @@ export const router = createBrowserRouter([
                 loader: loaderProductHome
             },
             {
+                path: "/products",
+                element: <Home/>,
+                loader: loaderProductHome
+            },
+            {
                 path: "/products/category/:category",
                 element: <ProductByCategory/>,
                 loader: ({ params }) => loaderProductByCategory(params.category)
             },
             {
-                path: "/products/:_id",
+                path: "/products/:productId",
                 element: <ProductDetail/>,
                 loader: ({ params }) => loaderProductDetail(params._id)
             },
-
-           
+            /*
+            {
+                path: "/dashboard/new",
+                element: <ProductEdit/>,
+                loader: ({ params }) => loaderProductEdit(params._id)
+            }
+            /*
+            {
+                path: "/dashboard/:productId/edit",
+                element: <ProductEdit/>,
+                loader: ({ params }) => loaderProductEdit(params._id)
+            }*/
         ]
     }
 ]);
