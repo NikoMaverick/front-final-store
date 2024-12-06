@@ -1,0 +1,23 @@
+.navs {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;;
+}
+
+.navLink {
+    min-width: 200px;
+    height: 80px;
+    color: #141414;
+    text-decoration: none;
+    border: none;
+}
+
+.navLink a {
+    width: 100%;
+    border: 1px solid black;
+}
+.navLink a:hover {
+    background-color: #E1F56E !important;
+    border-radius: 0.125rem !important;
+}
