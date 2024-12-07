@@ -1,53 +1,4 @@
-import { useState } from 'react';
-
-const NewProductForm = ({ addProduct }) => {
-    const [formData, setFormData] = useState({
-      team: '',
-      year: '',
-      description: '',
-      category: '',
-      country: '',
-      league: '',
-      image: null,
-      size: '',
-      price: '',
-    });
-  
-    const handleChange = (e) => {
-      const { name, value, type, files } = e.target;
-      setFormData((prevData) => ({
-        ...prevData,
-        [name]: type === 'file' ? files[0] : value,
-      }));
-    };
-  
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        
-        const formDataToSend = new FormData();
-
-        for (const [key, value] of Object.entries(formData)) {
-          formDataToSend.append(key, value);
-        }
-        try {
-          const res = await fetch(`${import.meta.env.VITE_APP_API_URL}dashboard`, {
-            method: 'POST',
-            body: formDataToSend,
-          });
-          if (!res.ok) {
-            throw new Error('Error, el producto no se ha creado');
-          }
-          const result = await res.json();
-          console.log('El producto se a creado:', result);
-         /* window.location.href = `/products/${result._id}`;*/
-        } catch (error) {
-          console.error('Error al acceder al producto:', error);
-        }
-      };
-  
-    return (
-      <>
-        <form onSubmit={handleSubmit}>
+<form onSubmit={handleSubmit}>
   <div>
     <h2 className="createH2">Añadir Producto</h2>
   </div>
@@ -95,9 +46,5 @@ const NewProductForm = ({ addProduct }) => {
 
   <button type="submit">Añadir producto</button>
 </form>
-      </>
-    );
-  };
-  
-  export default NewProductForm;
+
 

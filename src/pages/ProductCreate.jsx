@@ -8,7 +8,7 @@ const ProductCreate = () => {
 return(
 
     <div className="product-card">
-        <CreateProduct data={data} />
+        <CreateProduct key={data._id} data={data} />
         <h3>No Product found</h3>
     </div>
 )

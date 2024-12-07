@@ -2,12 +2,13 @@ import { Outlet, useNavigation } from "react-router-dom";
 import Header from '../components/header/Header.jsx';
 
 
+
 const LayoutPublic = () => {
     const navigation = useNavigation();
     return(
         <>
         <Header></Header>
-        <main style={{margin:'0 auto', minHeight:'70vh'}}>
+        <main>
             {navigation.state === 'loading' ? (
                 <div className="loanding">
                     <div className="loader"></div>
@@ -20,3 +21,5 @@ const LayoutPublic = () => {
 }
 
 export default LayoutPublic;
+
+

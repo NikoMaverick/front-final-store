@@ -145,50 +145,38 @@ body::-webkit-scrollbar-thumb{
 /* main */
 
 main {
-  display: flex; 
-  justify-content: center; 
-  flex-wrap: wrap; 
-  line-height: 1;
+  margin:'0 auto'; 
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-image: url("./assets/product/cesped1.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-
-.productCard{
-  background-color: yellow;
-  display: flex; 
-  justify-content: center; 
-  flex-wrap: wrap; 
+  padding: 20px;
 }
 
 
-.productCard.id{
-  display: flex;
-  justify-content: center;
-  align-items: end;
-  flex-wrap: wrap;
-  overflow-y: scroll;
-  background-color: transparent;
-  border-top-left-radius: 30px;
-	border-top-right-radius: 5px;
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 30px;
-  gap: 30px;
-  padding-top: 20px;
+.productcard{
+  background-color: green;
 }
-
 
 .product-card {
+  background-color: #80f;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  padding: 5px; 
+  padding: 20px; 
   border-radius: 8px; 
-  width: 250px; 
+
   text-align: center;
+  
 }
 
 .leyend{
+  width: 100;
   margin: 5px;
   gap: 5px;
   font-size: 20px;
@@ -569,4 +557,22 @@ form select {
   background-color: black; 
   color: white; 
   text-decoration: none; 
+}
+
+/* ERRORES */
+.message {
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.message.success {
+  background-color: #4CAF50; /* Verde para éxito */
+  color: white;
+}
+
+.message.error {
+  background-color: #f44336; /* Rojo para error */
+  color: white;
 }

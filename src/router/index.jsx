@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import { loaderProductHome, loaderProductByCategory, loaderProductDetail, loaderProductNew } from "../service/ProductService.jsx";
+import { loaderProductHome, loaderProductByCategory, loaderProductDetail } from "../service/ProductService.jsx";
 import LayoutPublic from "../layout/LayoutPublic.jsx";
 import Home from "../pages/Home.jsx";
 import NotFound from "../pages/NotFound.jsx";
@@ -27,7 +27,7 @@ export const router = createBrowserRouter([
                 loader: loaderProductHome
             },
             {
-                path: "/products/:_Id",
+                path: "/products/:_id",
                 element: <ProductDetail/>,
                 loader: ({ params }) => loaderProductDetail(params._id)
             },
@@ -45,13 +45,17 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/dashboard/new",
-                element: <ProductNew/>,
-                loader: loaderProductNew
+                element: <ProductNew/>
             },
             {
                 path: "/dashboard/category/:category",
                 element: <ProductByCategory/>,
                 loader: ({ params }) => loaderProductByCategory(params.category)
+            },
+            {
+                path: "/dashboard/:_id",
+                element: <ProductDetail/>,
+                loader: ({ params }) => loaderProductDetail(params._id)
             },
             /*
             {
@@ -60,11 +64,7 @@ export const router = createBrowserRouter([
                 loader: loaderCreateProduct
             },*/
 
-            {
-                path: "/dashboard/:_Id",
-                element: <ProductDetail/>,
-                loader: ({ params }) => loaderProductDetail(params._id)
-            },
+        
             /*
             {
                 path: "/dashboard/:productId/edit",

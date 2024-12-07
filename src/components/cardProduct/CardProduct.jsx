@@ -7,9 +7,9 @@ const CardProduct = (props) => {
     const index = props.index;
 
     return(
-        <div key={index} className="productCard">
+        <div className="productCard">
             <div>
-                <ImageCard pictureUrls={element.image}></ImageCard>
+                <ImageCard key={element.image} pictureUrls={element.image}></ImageCard>
                     <div className="leyend">
                         <h2>{element.team}</h2>
                         <h3>Temporada {element.year}</h3>
