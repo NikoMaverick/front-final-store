@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import ImageCard from "../image/ImageCard";
+import ImageCard from "../image/ImageCard.jsx";
 
 
 const CardProduct = (props) => {

@@ -1,5 +1,5 @@
 import {useLoaderData} from 'react-router-dom';
-import CardProduct from '../components/cardProduct/CardProduct';
+import CardProduct from '../components/cardProduct/CardProduct.jsx';
 
 
 const Home = () => {

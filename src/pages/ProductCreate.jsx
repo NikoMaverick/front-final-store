@@ -1,5 +1,5 @@
 import {useLoaderData} from 'react-router-dom';
-import CreateProduct from '../components/create/CreateProduct';
+import CreateProduct from '../components/create/CreateProduct.jsx';
 
 
 const ProductCreate = () => {

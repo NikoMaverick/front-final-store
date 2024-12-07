@@ -1,11 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
-import { loaderProductHome, loaderProductByCategory, loaderProductDetail, loaderProductNew } from "../service/ProductService";
-import LayoutPublic from "../layout/LayoutPublic";
-import Home from "../pages/Home";
-import NotFound from "../pages/NotFound";
-import ProductByCategory from '../pages/ProductByCategory';
-import ProductDetail from "../pages/ProductDetail";
-import ProductNew from "../pages/ProductNew";
+import { loaderProductHome, loaderProductByCategory, loaderProductDetail, loaderProductNew } from "../service/ProductService.jsx";
+import LayoutPublic from "../layout/LayoutPublic.jsx";
+import Home from "../pages/Home.jsx";
+import NotFound from "../pages/NotFound.jsx";
+import ProductByCategory from '../pages/ProductByCategory.jsx';
+import ProductDetail from "../pages/ProductDetail.jsx";
+import ProductNew from "../pages/ProductNew.jsx";
 //import CreateProduct from "../components/create/CreateProduct";
 
 

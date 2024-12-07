@@ -1,5 +1,5 @@
 import { Outlet, useNavigation } from "react-router-dom";
-import Header from '../components/header/Header';
+import Header from '../components/header/Header.jsx';
 
 
 const LayoutPublic = () => {

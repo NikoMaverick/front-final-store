@@ -1,5 +1,5 @@
 import {useLoaderData} from 'react-router-dom';
-import NewProductForm from '../form/NewProductForm';
+import NewProductForm from '../form/NewProductForm.jsx';
 
 
 const ProductNew = () => {
