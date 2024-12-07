@@ -8,11 +8,13 @@ const LayoutPublic = () => {
         <>
         <Header></Header>
         <main style={{margin:'0 auto', minHeight:'70vh'}}>
-        {navigation.state === 'loading' ? (
-            <div className="aletr alert-info my-5"> Loading...</div>
-        ) : <Outlet/>}
-            
-            </main>
+            {navigation.state === 'loading' ? (
+                <div className="loanding">
+                    <div className="loader"></div>
+                    <p>Loanding...</p>
+                </div>
+            ) : <Outlet/>}
+        </main>
         </>
     )
 }

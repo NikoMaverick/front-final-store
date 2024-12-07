@@ -16,7 +16,6 @@ const Navbar = () => {
                         <li><NavLink to="/dashboard/category/campeones">Oliver & Benji</NavLink></li>
                         <li><NavLink to="/dashboard/new">Nuevo producto</NavLink></li>
                         <li><NavLink to="/products">Cerrar Sesión</NavLink></li>
-                        <li><NavLink to="/apistore">API Store</NavLink></li>
                     </>
                 ) : (
                     <>

@@ -8,9 +8,9 @@ const CardProductDetail = (props) => {
 
     return(
         <div className="product-card">
-          <ImageCard pictureUrls={element.image}></ImageCard>
-          <div className="leyend">
-          <h2 className="card-title">{element.team}{element.year}</h2>
+            <ImageCard pictureUrls={element.image}></ImageCard>
+            <div className="leyend">
+            <h2>{element.team}{element.year}</h2>
             <p>{element.description}</p>
             <p>Categoria: {element.category}</p>
             <p>Pais: {element.country}</p>
@@ -31,8 +31,8 @@ const CardProductDetail = (props) => {
             <button type="submit">Añadir a la cesta</button>
           </div>
           <div className="editDelete">
-            <Link to={`/dashboard/${element._id}/edit`}>Editar</Link>
-            <button className="homeBtn" id="deleteProduct">Borrar</button>
+            <Link to={`/dashboard/${element._id}/edit`} className="editBtn">Editar</Link>
+            <button className="deleteBtn" id="deleteProduct">Borrar</button>
           </div>
 
         </div>

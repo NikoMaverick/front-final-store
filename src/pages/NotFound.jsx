@@ -1,14 +1,23 @@
 import {useRouteError, Link} from "react-router-dom"
+import Header from "../components/header/Header";
+
 
 const NotFound = () => {
     const error = useRouteError();
 
     return (
         <div>
-            <h1>404</h1>
-            <p>Page not found</p>
-            <p>{error.statusText || error.message} </p>
-            <Link to="/">Volver al Home</Link>
+            <div>
+                <Header></Header>
+            </div>
+            <div className="noFound">
+                <h1>404</h1>
+                <p>Pagina no encontrada</p>
+                <p>{error.statusText || error.message} </p>
+                <div className="noFoundBtn">
+                <Link to="/">Volver al Home</Link>
+                </div>
+            </div>
         </div>
     )
 

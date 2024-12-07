@@ -24,13 +24,7 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body {
-	line-height: 1;
-  background-image: url("/public/assets/cesped1.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
+
 ol, ul {
 	list-style: none;
 }
@@ -76,9 +70,9 @@ body::-webkit-scrollbar-thumb{
   border-radius: 50px;
   width: 10px;
 }
+
+
 /* header */
-
-
 
 .headerTop{
   display: flex;  
@@ -150,25 +144,24 @@ body::-webkit-scrollbar-thumb{
 
 /* main */
 
-.homeBtn {
-  font-weight: bolder;
-  background-color: white;
-  color: black;
-  font-size: 18px;
-  border-radius: 10px;
-  width: 100px;
-  height: 30px;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 30px;
+main {
+  display: flex; 
+  justify-content: center; 
+  flex-wrap: wrap; 
+  line-height: 1;
+  background-image: url("./assets/product/cesped1.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.productCard {
+.productCard{
+  background-color: yellow;
   display: flex; 
   justify-content: center; 
   flex-wrap: wrap; 
 }
+
 
 .productCard.id{
   display: flex;
@@ -196,7 +189,8 @@ body::-webkit-scrollbar-thumb{
 }
 
 .leyend{
-  margin-top: -10px;
+  margin: 5px;
+  gap: 5px;
   font-size: 20px;
   color: white;
   text-shadow: 
@@ -206,6 +200,62 @@ body::-webkit-scrollbar-thumb{
     1.5px 1.5px 0 black;
 }
 
+.homeBtn {
+  font-weight: bolder;
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none; 
+  cursor: pointer;
+  font-size: 18px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 30px;
+  margin: 10px;
+}
+
+
+.editBtn{
+  font-weight: bolder;
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none; 
+  cursor: pointer;
+  font-size: 18px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 30px;
+  margin: 20px;
+}
+
+.deleteBtn{
+  font-weight: bolder;
+  display: inline-block;
+  padding: 7px 20px;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none; 
+  cursor: pointer;
+  font-size: 18px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 30px;
+}
 
 .product-card button{
   margin-top: 10px;
@@ -260,6 +310,7 @@ h2{
   background-color: none;
   height: 40px;
   margin: 0;
+  cursor: pointer;
 }
 
 .size-basket button{
@@ -273,7 +324,9 @@ h2{
   border-top-right-radius: 5px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 30px;
-  margin-top: 23px;
+  margin-top: 30px;
+  cursor: pointer;
+  margin: 20px;
 }
 
 .size-basket input{
@@ -304,9 +357,8 @@ h2{
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 30px;
   padding-left: 10px;
+  cursor: pointer;
 }
-
-
 
 
 /* Formulario */
@@ -418,6 +470,103 @@ textarea{
 	margin:8px 0;
 }
 
+form input[type="text"],
+form input[type="number"],
+form textarea,
+form select {
+    color: black; 
+}
 
 
 
+/* Loader */
+.loader{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite; 
+}
+
+.loader::before, 
+.loader::after {
+  content: '';
+  position: absolute;
+  border-radius: inherit;
+}
+
+.loader::before {
+  width: 100%;
+  height: 100%;
+  background-image: 
+      linear-gradient(0deg, #f0c 0%, #80f 100%);
+}
+
+.loader::after {
+  width: 85%;
+  height: 85%;
+  background-color: transparent; 
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* No Found */
+
+.noFound {
+  width: 100%;
+  height: 100vh; /* Ajusta la altura para que ocupe todo el viewport */
+  background-image: url("/src/assets/product/cesped1.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  flex-wrap: wrap; 
+  flex-direction: column;
+  gap: 20px;
+
+}
+
+.noFound h1,
+.noFound p {
+  font-size: 20px;
+  color: white;
+  text-shadow: 
+    -1.5px -1.5px 0 black, 
+    1.5px -1.5px 0 black, 
+    -1.5px 1.5px 0 black, 
+    1.5px 1.5px 0 black;
+}
+
+
+
+.noFoundBtn a {
+  display: inline-block; 
+  color: black; 
+  background-color: white; 
+  padding: 10px 20px; 
+  border-radius: 30px; 
+  text-decoration: none; 
+  font-size: 16px; 
+  font-weight: bold; 
+  text-align: center; 
+  transition: all 0.3s ease; 
+  border-top-left-radius: 30px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 30px;
+}
+
+
+.noFoundBtn a:hover {
+  background-color: black; 
+  color: white; 
+  text-decoration: none; 
+}

@@ -7,14 +7,14 @@ const CardProduct = (props) => {
     const index = props.index;
 
     return(
-        <div key={index} className="col-md-4 mt-4">
-            <div className="card" style={{width: '18rem', height: '30rem', margin:'0 auto'}}>
+        <div key={index} className="productCard">
+            <div>
                 <ImageCard pictureUrls={element.image}></ImageCard>
-                    <div className="card-body">
-                        <h2 className="card-title">{element.team}</h2>
-                        <h2 className="card-subtitle mb-2 text-muted">{element.year}</h2>
-                        <Link to={`/products/${element._id}`}>Ver</Link>
+                    <div className="leyend">
+                        <h2>{element.team}</h2>
+                        <h3>Temporada {element.year}</h3>
                     </div>
+                    <Link to={`/products/${element._id}`} className="homeBtn">Ver</Link>
             </div>
         </div>
     )

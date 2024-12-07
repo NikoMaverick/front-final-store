@@ -3,19 +3,18 @@ import { useState, useEffect} from 'react'
 const ImageCard = (props) => {
     const imageElement = props.pictureUrls;
 
-    const [currentImage, setCurrentImage] = useState(null); // Estado para controlar la URL de la imagen
+    const [currentImage, setCurrentImage] = useState(null);
 
   useEffect(() => {
     if (imageElement) {
-      setCurrentImage(imageElement); // Cuando la URL está disponible, actualiza el estado
+      setCurrentImage(imageElement);
     }
   }, [imageElement]);
 
   return (
     <img
-      src={currentImage || "../../assets/imageNoFound.jpeg"} // Muestra la imagen vacía si currentImage es null
+      src={currentImage || "../../assets/imageNoFound.jpeg"}
       alt="Image"
-      style={{ width: "100%", height: "auto" }}
     />
   );
    
