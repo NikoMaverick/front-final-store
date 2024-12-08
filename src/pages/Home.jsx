@@ -8,7 +8,7 @@ const Home = () => {
 return(
     <div className="product-card">
         {data.length > 0 ? (data.map((element,index) =>(
-             <CardProduct key={data.id} element={element} index={index}/>
+             <CardProduct key={element._id} element={element} index={index}/>
         ) )
         ) : <h3> No Product found</h3>
         }

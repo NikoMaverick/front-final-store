@@ -19,12 +19,12 @@ export const loaderProductDetail = async (_id) => {
     return {data};
 }
 
-/*
+
 export const loaderProductEdit = async (_id) => {
-    const res = await fetch(`${import.meta.env.VITE_APP_API_URL}dashboard/edit/${_id}`)
-    const data = await res .json();
+    const res = await fetch(`${import.meta.env.VITE_APP_API_URL}dashboard/${_id}/edit`)
+    const data = await res.json();
     return {data};
-}*/
+}
 
 
 

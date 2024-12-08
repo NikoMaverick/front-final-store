@@ -1,12 +1,10 @@
-import NewProductForm from '../create/NewProductForm';
+import NewProductForm from '../createProduct/NewProductForm';
 
 const ProductNew = () => {
   return (
-    <div className="productcard">
       <div className="product-card">
         <NewProductForm />
       </div>
-    </div>
   );
 };
 

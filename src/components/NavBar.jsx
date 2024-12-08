@@ -36,12 +36,4 @@ const Navbar = () => {
 export default Navbar;
 
 
-
-
-
-// isDashboard = location.pathname.startsWith("/dashboard");
-// pathname: Es la propiedad del objeto, para entenderlo, es la rutadespues del dominio. 
-// startsWith: Es el método de JS que indica como una cadena comienza con un texto exespecíficico. Será true si comienza en este caso como /dashboard y falso si comienza con otro texto diferente. 
-// useLocation: Hook para acceder a la ubicación actual de la ruta
-            
      

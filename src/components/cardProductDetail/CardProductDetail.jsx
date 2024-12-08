@@ -58,7 +58,6 @@ const CardProductDetail = ({ element, index }) => {
           <div className="editDelete">
             <Link to={`/dashboard/${element._id}/edit`} className="editBtn">Editar</Link>
             <button onClick={() => DeleteProduct(element._id)} className="deleteBtn" id="deleteProduct">Borrar</button>
-            
           </div>
 
         </div>

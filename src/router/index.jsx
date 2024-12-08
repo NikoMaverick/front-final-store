@@ -1,11 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
-import { loaderProductHome, loaderProductByCategory, loaderProductDetail } from "../service/ProductService.jsx";
+import { loaderProductHome, loaderProductByCategory, loaderProductDetail, loaderProductEdit } from "../service/ProductService.jsx";
 import LayoutPublic from "../layout/LayoutPublic.jsx";
 import Home from "../pages/Home.jsx";
 import NotFound from "../pages/NotFound.jsx";
 import ProductByCategory from '../pages/ProductByCategory.jsx';
 import ProductDetail from "../pages/ProductDetail.jsx";
 import ProductNew from "../pages/ProductNew.jsx";
+import EditProductForm from "../editProduct/EditProductForm.jsx";
 
 
 
@@ -58,12 +59,11 @@ export const router = createBrowserRouter([
                 element: <ProductNew/>
             },
             
-            /*
             {
-                path: "/dashboard/:productId/edit",
-                element: <ProductEdit/>,
+                path: "/dashboard/:id/edit",
+                element: <EditProductForm/>,
                 loader: ({ params }) => loaderProductEdit(params._id)
-            }*/
+            }
             
         ]
     }
