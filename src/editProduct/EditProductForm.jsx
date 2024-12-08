@@ -21,7 +21,7 @@ const EditProductForm = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await fetch(`${import.meta.env.VITE_APP_API_URL}dashboard/${id}`);
+        const response = await fetch(`${import.meta.env.VITE_APP_API_URL}/dashboard/${id}`);
         if (!response.ok) {
           throw new Error("No se pudo cargar el producto");
         }
@@ -43,7 +43,7 @@ const EditProductForm = () => {
     setError(""); 
 
     try {
-      const response = await fetch(`${import.meta.env.VITE_APP_API_URL}dashboard/${id}`, {
+      const response = await fetch(`${import.meta.env.VITE_APP_API_URL}/dashboard/${id}`, {
         method: "PUT", 
         headers: {
           "Content-Type": "application/json",

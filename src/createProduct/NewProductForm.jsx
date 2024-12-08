@@ -25,7 +25,7 @@ const NewProductForm = () => {
     setError(''); 
 
     try {
-      const response = await fetch(`${import.meta.env.VITE_APP_API_URL}dashboard/`, {
+      const response = await fetch(`${import.meta.env.VITE_APP_API_URL}/dashboard/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

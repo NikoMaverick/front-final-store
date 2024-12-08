@@ -13,7 +13,7 @@ const CardProductDetail = ({ element, index }) => {
       setIsLoading(true);
       setError(null);
       try {
-          const res = await fetch(`${import.meta.env.VITE_APP_API_URL}dashboard/${_id}/delete`, {
+          const res = await fetch(`${import.meta.env.VITE_APP_API_URL}/dashboard/${_id}/delete`, {
               method: "DELETE",
           });
 
