@@ -6,14 +6,14 @@ import NotFound from "../pages/NotFound.jsx";
 import ProductByCategory from '../pages/ProductByCategory.jsx';
 import ProductDetail from "../pages/ProductDetail.jsx";
 import ProductNew from "../pages/ProductNew.jsx";
-//import CreateProduct from "../components/create/CreateProduct";
+
 
 
 
 export const router = createBrowserRouter([
     {
         path: '/',
-        element: <LayoutPublic></LayoutPublic>,
+        element: <LayoutPublic />,
         errorElement: <NotFound/>,
         children: [
             {
@@ -44,10 +44,6 @@ export const router = createBrowserRouter([
                 loader: loaderProductHome
             },
             {
-                path: "/dashboard/new",
-                element: <ProductNew/>
-            },
-            {
                 path: "/dashboard/category/:category",
                 element: <ProductByCategory/>,
                 loader: ({ params }) => loaderProductByCategory(params.category)
@@ -57,14 +53,11 @@ export const router = createBrowserRouter([
                 element: <ProductDetail/>,
                 loader: ({ params }) => loaderProductDetail(params._id)
             },
-            /*
             {
-                path: "/dashboard",
-                element: <CreateProduct/>,
-                loader: loaderCreateProduct
-            },*/
-
-        
+                path: "/dashboard/new",
+                element: <ProductNew/>
+            },
+            
             /*
             {
                 path: "/dashboard/:productId/edit",

@@ -7,7 +7,7 @@ const LayoutPublic = () => {
     const navigation = useNavigation();
     return(
         <>
-        <Header></Header>
+        <Header />
         <main>
             {navigation.state === 'loading' ? (
                 <div className="loanding">

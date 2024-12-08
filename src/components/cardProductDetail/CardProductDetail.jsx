@@ -33,7 +33,7 @@ const CardProductDetail = ({ element, index }) => {
   
 
     return(
-        <div className="ESTOESproduct-card">
+        <div className="product-card">
           <ImageCard pictureUrls={element.image}></ImageCard>
           <div className="leyend">
               <h2>{element.team} - {element.year}</h2>
@@ -44,7 +44,7 @@ const CardProductDetail = ({ element, index }) => {
           </div>
           <div className="size-basket">
             <select name="size" className="sizeProduct" id="sizeProduct">
-              <option value="" disabled="" selected="">Talla</option>
+              <option value="" disabled="">Talla</option>
               <option value="XS">XS</option>
               <option value="S">S</option>
               <option value="M">M</option>

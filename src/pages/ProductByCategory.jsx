@@ -7,7 +7,7 @@ const {data} = useLoaderData();
 return(
     <div className="product-card">
         {data.length > 0 ? (data.map((element) =>(
-            <CardProduct key={element.id} element={element}/>  
+            <CardProduct key={element._id} element={element}/>  
         ) )
         ) : <h3> No Product found</h3>
         }

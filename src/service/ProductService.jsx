@@ -18,23 +18,6 @@ export const loaderProductDetail = async (_id) => {
     console.log('_id recibido:', _id);
     return {data};
 }
-/*
-export const loaderProductNew = async () => {
-    const res = await fetch(`${import.meta.env.VITE_APP_API_URL}dashboard/new`);
-    if (!res.ok) {
-        throw new Error('Error al cargar los datos del producto');
-    }
-    const data = await res.json();
-    return { data };
-}*/
-
-/*
-export const loaderCreateProduct = async (_id) => {
-    const res = await fetch(`${import.meta.env.VITE_APP_API_URL}dashboard`) //POST
-    const data = await res .json();
-
-    return {data};
-}*/
 
 /*
 export const loaderProductEdit = async (_id) => {
