@@ -69,7 +69,7 @@ const EditProductForm = () => {
       <form onSubmit={handleSubmit}>
         <h2 className="editH2">Editar Producto</h2>
         <div>
-          <label>Team:</label>
+          <label>Equipo</label>
           <input
             type="text"
             name="team"
@@ -79,7 +79,7 @@ const EditProductForm = () => {
           />
         </div>
         <div>
-          <label>Year:</label>
+          <label>Temporada</label>
           <input
             type="number"
             name="year"
@@ -89,7 +89,7 @@ const EditProductForm = () => {
           />
         </div>
         <div>
-          <label>Description:</label>
+          <label>Descripción</label>
           <textarea
             name="description"
             value={formData.description}
@@ -98,7 +98,7 @@ const EditProductForm = () => {
           />
         </div>
         <div>
-          <label>Category:</label>
+          <label>Categoria</label>
           <select
             name="category"
             value={formData.category}
@@ -114,7 +114,7 @@ const EditProductForm = () => {
           </select>
         </div>
         <div>
-          <label>Country:</label>
+          <label>Pais</label>
           <input
             type="text"
             name="country"
@@ -124,7 +124,7 @@ const EditProductForm = () => {
           />
         </div>
         <div>
-          <label>League:</label>
+          <label>Liga</label>
           <input
             type="text"
             name="league"
@@ -134,16 +134,15 @@ const EditProductForm = () => {
           />
         </div>
         <div>
-          <label>Image URL:</label>
+          <label>Imagen</label>
           <input
-            type="url"
+            type="file"
             name="image"
-            value={formData.image}
             onChange={handleChange}
           />
         </div>
         <div>
-          <label>Size:</label>
+          <label>Talla</label>
           <select
             name="size"
             value={formData.size}

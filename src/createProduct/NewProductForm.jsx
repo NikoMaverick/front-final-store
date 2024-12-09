@@ -51,7 +51,7 @@ const NewProductForm = () => {
       <form onSubmit={handleSubmit}>
         <h2 className='createH2' >Crear Nuevo Producto</h2>
         <div>
-          <label>Team:</label>
+          <label>Equipo</label>
           <input
             type="text"
             name="team"
@@ -61,7 +61,7 @@ const NewProductForm = () => {
           />
         </div>
         <div>
-          <label>Year:</label>
+          <label>Temporada</label>
           <input
             type="number"
             name="year"
@@ -71,7 +71,7 @@ const NewProductForm = () => {
           />
         </div>
         <div>
-          <label>Description:</label>
+          <label>Descripción</label>
           <textarea
             name="description"
             value={formData.description}
@@ -80,7 +80,7 @@ const NewProductForm = () => {
           />
         </div>
         <div>
-          <label>Category:</label>
+          <label>Categoría</label>
           <select
             name="category"
             value={formData.category}
@@ -96,7 +96,7 @@ const NewProductForm = () => {
           </select>
         </div>
         <div>
-          <label>Country:</label>
+          <label>Pais</label>
           <input
             type="text"
             name="country"
@@ -106,7 +106,7 @@ const NewProductForm = () => {
           />
         </div>
         <div>
-          <label>League:</label>
+          <label>Liga</label>
           <input
             type="text"
             name="league"
@@ -116,16 +116,15 @@ const NewProductForm = () => {
           />
         </div>
         <div>
-          <label>Image URL:</label>
+          <label>Imagen</label>
           <input
-            type="url"
+            type="file"
             name="image"
-            value={formData.image}
             onChange={handleChange}
           />
         </div>
         <div>
-          <label>Size:</label>
+          <label>Talla</label>
           <select
             name="size"
             value={formData.size}
@@ -142,10 +141,11 @@ const NewProductForm = () => {
           </select>
         </div>
         <div>
-          <label>Price:</label>
+          <label>Precio</label>
           <input
             type="number"
             name="price"
+            min={0}
             value={formData.price}
             onChange={handleChange}
             required

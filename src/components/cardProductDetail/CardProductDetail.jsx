@@ -33,7 +33,7 @@ const CardProductDetail = ({ element, index }) => {
   
 
     return(
-        <div className="product-card">
+        <div className="productDetail">
           <ImageCard pictureUrls={element.image}></ImageCard>
           <div className="leyend">
               <h2>{element.team} - {element.year}</h2>

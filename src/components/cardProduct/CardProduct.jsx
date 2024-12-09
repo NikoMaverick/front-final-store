@@ -8,14 +8,12 @@ const CardProduct = (props) => {
 
     return(
         <div className="productCard">
-            <div>
-                <ImageCard key={element.image} pictureUrls={element.image}></ImageCard>
-                    <div className="leyend">
-                        <h2>{element.team}</h2>
-                        <h3>Temporada {element.year}</h3>
-                    </div>
-                    <Link to={`/products/${element._id}`} className="homeBtn">Ver</Link>
-            </div>
+            <ImageCard key={element.image} pictureUrls={element.image}></ImageCard>
+                <div className="leyend">
+                    <h2>{element.team}</h2>
+                    <h3>Temporada {element.year}</h3>
+                </div>
+            <Link to={`/products/${element._id}`} className="homeBtn">Ver</Link>
         </div>
     )
 }
