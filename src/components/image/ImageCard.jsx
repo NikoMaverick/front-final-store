@@ -13,7 +13,7 @@ const ImageCard = (props) => {
 
   return (
     <img
-      src={currentImage ? "../../src/assets/product/" + currentImage : "../../src/assets/ImagenKO.webp"}
+      src={currentImage ? "/public/assets/product/" + currentImage : "../../src/assets/ImagenKO.webp"}
       alt="ImagenKO.webp"
     />
   );
