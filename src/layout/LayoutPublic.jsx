@@ -11,6 +11,7 @@ const LayoutPublic = () => {
         <main>
             {navigation.state === 'loading' ? (
                 <div className="loanding">
+                    <div className="porteria"></div>
                     <div className="loader"></div>
                     <p>Loanding...</p>
                 </div>

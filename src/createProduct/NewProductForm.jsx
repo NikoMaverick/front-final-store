@@ -24,6 +24,8 @@ const NewProductForm = () => {
     e.preventDefault();
     setError(''); 
 
+    console.log("Datos enviados:", data);
+    
     try {
       const response = await fetch(`${import.meta.env.VITE_APP_API_URL}/dashboard/`, {
         method: 'POST',
@@ -63,7 +65,7 @@ const NewProductForm = () => {
         <div>
           <label>Temporada</label>
           <input
-            type="number"
+            type="text"
             name="year"
             value={formData.year}
             onChange={handleChange}
